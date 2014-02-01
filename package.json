@@ -1,0 +1,21 @@
+{
+  "name": "oa-ead",
+  "version": "0.0.1",
+  "description": "Apprenticeship Object EAD",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "rafaellucio",
+  "license": "MIT",
+  "dependencies": {
+    "express": "3.4.2",
+    "jade": "*",
+    "mysql": "~2.0.1",
+    "socket.io": "~0.9.16"
+  },
+  "engines": {
+    "node": "0.10.25"
+  }
+}
