@@ -16,16 +16,6 @@ var connection = mysql.createConnection({
 	database: 'moodle_project'
 });
 
-connection.connect();
-
-connection.query('SELECT * FROM users', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows);
-});
-
-connection.end();
-
 // var connection = mysql.createConnection({
 // 	host: 'us-cdbr-east-05.cleardb.net',
 // 	user: 'b7d0fa1174c963',
@@ -52,6 +42,26 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+
+app.post('/login', function (req, res) {
+
+	var user = req.body.username;
+	var pass = req.body.password;
+
+	connection.connect();
+
+	connection.query('SELECT * FROM users', function (err, rows, fields) {
+		if (err) throw err;
+
+		rows.forEach(function(data, index) {
+			if (data.username === user) {
+				res.json(data);
+			}
+		});
+	});
+
+	connection.end();
+});
 
 app.get('/users', user.list);
 
