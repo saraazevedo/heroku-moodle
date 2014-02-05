@@ -1,15 +1,10 @@
+
 /*
- * GET home page.
+ * Post login listing.
  */
 
 var mysql = require('mysql');
 var connection = require('../functions/connection');
-
-exports.index = function (req, res) {
-	res.render('index', {
-		title: 'Apprenticeship Object EAD'
-	});
-};
 
 exports.login = function (req, res) {
 	var user = req.body.username;
@@ -17,10 +12,7 @@ exports.login = function (req, res) {
 
 	connection.connect();
 
-
-	var sql = 'SELECT * FROM type_users WHERE type_user_description = ' + connection.escape(user);
-	
-	connection.query(sql, function (err, rows, fields) {
+	connection.query('SELECT * FROM type_users', function (err, rows, fields) {
 		if (err) throw err;
 
 		res.json(rows);

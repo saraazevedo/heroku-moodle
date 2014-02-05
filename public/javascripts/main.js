@@ -18,13 +18,14 @@ require(['jquery', 'bootstrap'], function ($, bootstrap) {
 			return false;
 		} else {
 			$.ajax({
-				url: '/login',
+				url: '/',
 				type: 'POST',
 				dataType: 'json',
 				data: {username: user, password: pass}
 			})
 			.done(function(data) {
-				console.log("success " + data);
+				console.log(data instanceof Array);
+				console.log(data[0]);
 			})
 			.fail(function(xhr) {
 				console.log("error " + xhr);
