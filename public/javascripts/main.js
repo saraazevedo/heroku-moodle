@@ -24,7 +24,7 @@ require(['jquery', 'bootstrap'], function ($, bootstrap) {
 				data: {username: user, password: pass}
 			})
 			.done(function(data) {
-				console.log("success " + data);
+				console.log(data);
 			})
 			.fail(function(xhr) {
 				console.log("error " + xhr);
