@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 
-// var connection = mysql.createConnection({
+// module.exports = mysql.createConnection({
 // 	host: 'us-cdbr-east-05.cleardb.net',
 // 	user: 'b7d0fa1174c963',
 // 	password: 'b73df636',
