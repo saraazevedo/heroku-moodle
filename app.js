@@ -2,10 +2,13 @@
  * Module dependencies.
  */
 
+var teacher = require('./routes/teacher');
+var student = require('./routes/student');
+var admin = require('./routes/admin');
+var login = require('./routes/login');
+
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
-var login = require('./routes/login');
 var http = require('http');
 var path = require('path');
 
@@ -28,10 +31,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/ead-admin', admin.index);
+app.get('/ead-teacher', teacher.index);
+app.get('/ead-student', student.index);
 
 app.post('/login', login.login);
 
-app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function () {
 	console.log('Express server listening on port ' + app.get('port'));
