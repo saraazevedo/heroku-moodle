@@ -1,54 +1,89 @@
-div(class="container")
-  div(class="hero-unit")
-    h1 Welcome, Administrator
-    p Welcome to the web application perfecting his knowledge and learning, based on automatic monitoring of students, through the fuzzy logic.
-    p
-      a(href="#" class="btn btn-primary btn-large") Learn more &raquo;
-  div(class="row")
-    div(class="span4")
-      h2 Create Users
-      p Click the "User" tab and the "teacher" or "student" or "Administrator" link. Enter the actual name of the user, select a user name and temporary password to register. Then click on "Create new account" button. Repeat as necessary.
-      div(class="btn-group")
-        a(class="btn btn-primary" href="#")
-          i(class="icon-user icon-white") Create Users
-        a(class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#")
-          span(class="caret")
-        ul(class="dropdown-menu")
-          li
-            a(href="access.php?id=3")
-              i(class="icon-pencil") Teacher
-          li(class="divider")
-          li
-            a(href="access.php?id=4")
-              i(class="icon-user") Student
-          li(class="divider")
-          li
-            a(href="access.php?id=2")
-              i(class="icon-eye-open") Administrator
-    div(class="span4")
-      h2 Registers
-      p Click the "Discipline" link, enter the actual name of your discipline, choose the type of discipline, or "EAD" or "Face to Face" and register. Then click the "Register Course" button. Repeat as necessary.
-      div(class="btn-group" style="padding-top: 18px;")
-        a(class="btn btn-primary" href="#")
-          i(class="icon-book icon-white") Registers
-        a(class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#")
-          span(class="caret")
-        ul(class="dropdown-menu")
-          li
-            a(href="register_team.php") 
-              i(class="icon-asterisk") Classes
-    div(class="span4")
-      h2 Link
-      p Click the "Link Teacher" link, enter the actual name of your teacher, choose the type of discipline, or "EAD" or "Face" and the record. Then click the "Link Teacher" button. Repeat as necessary.
-      div(class="btn-group" style="padding-top: 18px;")
-        a(class="btn btn-primary" href="#")
-          i(class="icon-user icon-white") Link
-        a(class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#") 
-          span(class="caret")
-        ul(class="dropdown-menu")
-          li
-            a(href="vinculate_users_team.php") 
-              i(class="icon-asterisk") Users for Classes
-  hr
-  footer
-    p &copy; Apprenticeship Object Project 2013
+extends ../layout
+
+block content
+  div(class='navbar navbar-inverse navbar-fixed-top')
+    div(class='navbar-inner')
+      div(class='container')
+        button(type='button' class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse')
+          span(class='icon-bar')
+          span(class='icon-bar')
+          span(class='icon-bar')
+        a(class='brand' href='index.html') Project Moodle
+        div(class='nav-collapse collapse')
+          ul(class='nav')
+            li(class='active')
+              a(href='#') Home
+            li
+              a(href='#about') About
+            li
+              a(href='#contact') Contact
+          div(class="pull-right")
+            ul(class="nav pull-right")
+              li(class="dropdown")
+                a(href="#" class="dropdown-toggle" data-toggle="dropdown") Welcome Administrator
+                  b(class="caret")
+                ul(class="dropdown-menu")
+                  li 
+                    a(href="#") Preferences
+                      i(class="icon-cog") 
+                  li 
+                    a(href="#") Contact Support
+                      i(class="icon-envelope") 
+                  li(class="divider")
+                  li 
+                    a(href="../functions/session_logout.html") Logout
+                      i(class="icon-off")
+  div(class="container")
+    div(class="hero-unit")
+      h1 Welcome administrator
+      p Welcome to the web application perfecting his knowledge and learning, based on automatic monitoring of students, through the fuzzy logic.
+      p
+        a(href="#" class="btn btn-primary btn-large") Learn more &raquo;
+    div(class="row")
+      div(class="span4")
+        h2 Create Users
+        p Click the "User" tab and the "teacher" or "student" or "Administrator" link. Enter the actual name of the user, select a user name and temporary password to register. Then click on "Create new account" button. Repeat as necessary.
+        div(class="btn-group")
+          a(class="btn btn-primary" href="#") Create Users
+            i(class="icon-user icon-white")
+          a(class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#")
+            span(class="caret")
+          ul(class="dropdown-menu")
+            li
+              a(href="access.html?id=3") Teacher
+                i(class="icon-pencil")
+            li(class="divider")
+            li
+              a(href="access.html?id=4") Student
+                i(class="icon-user")
+            li(class="divider")
+            li
+              a(href="access.html?id=2") Administrator
+                i(class="icon-eye-open")
+      div(class="span4")
+        h2 Registers
+        p Click the "Discipline" link, enter the actual name of your discipline, choose the type of discipline, or "EAD" or "Face to Face" and register. Then click the "Register Course" button. Repeat as necessary.
+        div(class="btn-group" style="padding-top: 18px;")
+          a(class="btn btn-primary" href="#") Registers
+            i(class="icon-book icon-white")
+          a(class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#")
+            span(class="caret")
+          ul(class="dropdown-menu")
+            li
+              a(href="register_team.html") Classes
+                i(class="icon-asterisk")
+      div(class="span4")
+        h2 Link
+        p Click the "Link Teacher" link, enter the actual name of your teacher, choose the type of discipline, or "EAD" or "Face" and the record. Then click the "Link Teacher" button. Repeat as necessary.
+        div(class="btn-group" style="padding-top: 18px;")
+          a(class="btn btn-primary" href="#") Link
+            i(class="icon-user icon-white")
+          a(class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#") 
+            span(class="caret")
+          ul(class="dropdown-menu")
+            li
+              a(href="vinculate_users_team.html") Users for Classes
+                i(class="icon-asterisk")
+    hr
+    footer
+      p &copy; Apprenticeship Object Project 2013

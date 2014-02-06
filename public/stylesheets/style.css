@@ -1,8 +1,20 @@
 body {
-  padding: 50px;
+  padding: 60px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.container .hero-unit{
+	text-align: center;
+}
+
+.form-search, .form-search-table{
+	display: none;
+}
+
+.form-search.active, .form-search-table.active{
+	display: block;
 }

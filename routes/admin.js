@@ -3,5 +3,7 @@
  */
 
 exports.index = function (req, res) {
-	console.log('oi');
+	res.render('ead-admin/index', {
+		title: 'Apprenticeship Object EAD'
+	});
 };
