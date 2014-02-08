@@ -1,1 +1,27 @@
 extends ../layout
+
+block content
+  div(class="container") 
+    div(class="row-fluid") 
+      div(class="span9") 
+        div(class="page-header") 
+          h1 Titulo disciplina
+        div 
+          form(class="form-horizontal") 
+            div(class="control-group") 
+              label(class="control-label" for="appendedInputButton") Add Thread
+              div(class="controls") 
+                input(name="topic_title" id="appendedInputButton" type="text" placeholder="Acrescentar Tópico" required) 
+            div(class="control-group") 
+              label(class="control-label") Description of the topic
+              div(class="controls") 
+                textarea(name="topic_description" rows="3" placeholder="Description of the topic" required) 
+            div(class="control-group") 
+              div(class="controls") 
+                button(type="submit" class="btn btn-primary") Add Topic
+                button(class="btn" type="button") Activity History 
+                button(class="btn" type="button") Activities in implementing
+        div(class="accordion" id="accordion2") 
+    hr 
+    footer 
+      p &copy; Apprenticeship Object Project 2013

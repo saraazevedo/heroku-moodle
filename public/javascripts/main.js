@@ -1,12 +1,13 @@
 require.config({
 	paths: {
 		jquery: '../bower_components/jquery/jquery.min',
-		bootstrap: '../bower_components/bootstrap/docs/assets/js/bootstrap.min'
+		bootstrap: '../bower_components/bootstrap/docs/assets/js/bootstrap.min',
+		access: '../javascripts/access'
 	},
 	shim: { 'bootstrap': { deps: ['jquery'] } }
 });
 
-require(['jquery', 'bootstrap'], function ($, bootstrap) {
+require(['jquery', 'bootstrap', 'access'], function ($, bootstrap) {
 	'use strict';
 
 	$('#submitLogin').on('click', function () {

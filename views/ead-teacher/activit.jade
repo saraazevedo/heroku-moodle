@@ -1,1 +1,27 @@
 extends ../layout
+
+block content
+  div(class="container")
+    div(class="row-fluid")
+      div(class="span9")
+        div(class="page-header")
+          table(cellspacing="0" summary="Tabela de dados fictícios" class="table table-striped")
+            thead
+              tr
+                th 
+                  input(type="checkbox" value="1" id="marcar-todos" name="marcar-todos")
+                th Atividade
+                th ID
+                th Username
+                th Pergunta
+                th Resposta
+                th Data da resposta
+                th Finalização da tarefa
+                th Nota
+            tbody
+              tr
+                fonte(face='Courier')
+              tr
+    hr
+    footer
+      p &copy; Apprenticeship Object Project 2013

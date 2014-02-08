@@ -1,26 +1,6 @@
 extends layout
 
 block content
-  div(class='navbar navbar-inverse navbar-fixed-top')
-    div(class='navbar-inner')
-      div(class='container')
-        button(type='button' class='btn btn-navbar' data-toggle='collapse' data-target='.nav-collapse')
-          span(class='icon-bar')
-          span(class='icon-bar')
-          span(class='icon-bar')
-        a(class='brand' href='index.php') Project Moodle
-        div(class='nav-collapse collapse')
-          ul(class='nav')
-            li(class='active')
-              a(href='#') Home
-            li
-              a(href='#about') About
-            li
-              a(href='#contact') Contact
-          form(id='form_login' class='navbar-form pull-right')
-            input(type='text' placeholder='Login' name='username' id='username' class='span2')
-            input(type='password' placeholder='password' name='password' id='password' class='span2')
-            button(type='button' id='submitLogin' name='send' class='btn') Access
   div(class="container")
     div(class="hero-unit")
       h1= title

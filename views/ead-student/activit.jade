@@ -1,1 +1,23 @@
 extends ../layout
+
+block content
+  div(class="container")
+    div(class="row-fluid")
+      div(class="span5")
+        div(class="modal-header span11" style="margin:10px;")
+          h3 Name of activit
+        div(class="answer well" style="padding-bottom:0;")
+          form(id="response" name="response")
+            textarea(class="span12" onkeyup="count()" id="new_response" name="new_response" placeholder="Type in your message" rows="5")
+            input(class="id_team_hidden" type="hidden" name="id_team" id="id_team" value="?php echo $id_team ?>")
+            h6(class="pull-right" id="") números de caracteres: 
+              span(id="amount") 0
+            button(class="btn btn-info" type="submit") Poste sua resposta
+      div(class="span4")
+    a(class="btn btn-small span2" style=" float:right;" href="#" id="showChat")
+      i(class="icon-comment")
+    hr
+    footer
+      p &copy; Apprenticeship Object Project 2013
+    
+  

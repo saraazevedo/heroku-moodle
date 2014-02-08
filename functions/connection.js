@@ -1,4 +1,8 @@
-var mysql = require('mysql');
+var mysql = require('mysql'),
+	HOST = 'localhost',
+	MYSQL_USER = 'root',
+	MYSQL_PASS = '',
+	DATABASE = 'moodle_project';
 
 // module.exports = mysql.createConnection({
 // 	host: 'us-cdbr-east-05.cleardb.net',
@@ -8,8 +12,8 @@ var mysql = require('mysql');
 // });
 
 module.exports = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: '',
-	database: 'moodle_project'
+	host: HOST,
+	user: MYSQL_USER,
+	password: MYSQL_PASS,
+	database: DATABASE
 });

@@ -1,1 +1,41 @@
 extends ../layout
+
+block content
+  div(class="container")
+    div(class="row-fluid")
+      form(class="well span12 form-signin")
+        fieldset 
+          div(class="form-search active")
+            legend(style="padding:0 2px 0 0;") Search team
+            div(class="vinculateUsers") 
+              form(class="search-team-ajax") 
+                input(type="text" placeholder="name of team" class="input-large search-query team")
+                button(class="search-team" type="button" class="btn") Search team
+              div(class="form-search-table") 
+                table(class="table table-hover") 
+                  thead 
+                    tr 
+                      th Id
+                      th Name of team
+                      th Link
+                  tbody(class="form-search-results-team") 
+          div(class="form-search active") 
+            legend(style="padding:0 2px 0 0;") Link user
+            div(class="vinculateUsers") 
+              form(class="search-users-ajax") 
+                input(type="text" placeholder="name of user" class="input-large search-query users") 
+                button(class="search-users" type="button" class="btn") Search user
+              div(class="form-search-table") 
+                table(class="table table-hover") 
+                  thead 
+                    tr 
+                      th Id
+                      th Name of user
+                      th Last name
+                      th E-mail
+                      th Link
+                  tbody(class="form-search-results")
+          button(id="send" class="btn") Link users of team
+    hr
+    footer
+      p &copy; Apprenticeship Object Project 2013

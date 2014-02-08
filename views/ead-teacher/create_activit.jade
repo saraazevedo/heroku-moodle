@@ -1,1 +1,94 @@
 extends ../layout
+
+block content
+	div(class="container")
+		div(class="row-fluid")
+			div(class="span9")
+				form(class="bs-docs-example")
+					fieldset
+						legend
+							center
+								b
+									font(size="6") Creating Activity
+						label Description of activity
+						textarea(rows="10" class="span12" name="activit_description" placeholder="Description of activity..." required)
+					fieldset
+						legend Tips
+						div(class="input-append")
+							label Tip 1
+							input(type="text" name="tip_description[]" placeholder="enter the" required)
+						div(class="input-prepend")
+							label Type:
+							select(name="value_tip[]" required)
+								option(value="" disabled="disabled" selected="selected" required) Select
+								option(value="4") Video
+								option(value="2") Link
+								option(value="3") Image
+								option(value="1") Text
+						br
+						br
+						div(class="input-append")
+							label Tip 2
+							input(type="text" name="tip_description[]" placeholder="enter the" required)
+						div(class="input-prepend")
+							label Type:
+							select(name="value_tip[]" required)
+								option(value="" disabled="disabled" selected="selected" required) Select
+								option(value="4") Video
+								option(value="2") Link
+								option(value="3") Image
+								option(value="1") Text
+						br
+						div(class="input-append")
+							label Tip 3
+							input(type="text" name="tip_description[]" placeholder="enter the" required)
+						div(class="input-prepend")
+							label Type:
+							select(name="value_tip[]" required)
+								option(value="" disabled="disabled" selected="selected" required) Select
+								option(value="4") Video
+								option(value="2") Link
+								option(value="3") Image
+								option(value="1") Text
+						br
+						div(class="input-append")
+							label Tip 4
+							input(type="text" name="tip_description[]" placeholder="enter the" required)
+						div(class="input-prepend")
+							label Type:
+							select(name="value_tip[]" required)
+								option(value="" disabled="disabled" selected="selected" required) Select
+								option(value="4") Video
+								option(value="2") Link
+								option(value="3") Image
+								option(value="1") Text
+						br
+						div(class="input-append")
+							label Tip 5
+							input(type="text" name="tip_description[]" placeholder="enter the" required)
+						div(class="input-prepend")
+							label Type:
+							select(name="value_tip[]" required)
+								option(value="" disabled="disabled" selected="selected" required) Select
+								option(value="4") Video
+								option(value="2") Link
+								option(value="3") Image
+								option(value="1") Text
+					fieldset
+						legend Start Date 
+						div(id="fitem_id_allowsubmissionsfromdate" class="fitem fitem_fdate_time_selector")
+							div(class="fitemtitle")
+								div(class="fgrouplabel")
+									input(type="date" name="date_start" placeholder="dd/mm/aaaa" required)
+									input(type="time" name="time_start" value="00:00" required)
+					fieldset
+						legend Closing Date 
+						div(id="fitem_id_allowsubmissionsfromdate" class="fitem fitem_fdate_time_selector")
+							div(class="fitemtitle")
+								div(class="fgrouplabel")
+									input(type="date" name="date_end" placeholder="dd/mm/aaaa" required)
+									input(type="time" name="time_end" value="00:00" required)
+					button(type="button" class="btn") Send
+		hr
+		footer
+			p &copy; Apprenticeship Object Project 2013
