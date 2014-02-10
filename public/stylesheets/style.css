@@ -18,3 +18,15 @@ a {
 .form-search.active, .form-search-table.active{
 	display: block;
 }
+
+.feedbacks{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 90%;
+	height: auto;
+	margin-top: 60px;
+	margin-left: 5%;
+	margin-right: 5%;
+}

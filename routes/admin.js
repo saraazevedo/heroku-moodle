@@ -1,7 +1,9 @@
+var mysql = require('mysql');
+var connection = require('../functions/connection');
+
 /*
  * Routers module Admin
  */
-
 exports.index = function (req, res) {
 	res.render('ead-admin/index', {
 		layout: 'admin',
@@ -18,8 +20,19 @@ exports.access = function (req, res) {
 };
 
 exports.create_user = function (req, res) {
-	var json = {data: '123'};
-	res.render('ead-admin/access', json);
+	var data = {
+		username: req.body.username,
+		first_name: req.body.first_name,
+		last_name: req.body.last_name,
+		password: req.body.password,
+		email: req.body.email,
+		info: req.body.info
+	}
+
+//	connection.query('INSERT INTO users (username, password, first_name, last_name, email, date_register, status, type_users, image_user_path, info) VALUES' ('asdf', '912ec803b2ce49e4a541068d495ab570', 'asdf', 'asdf', 'asd@asdf.com', now(), 1, 3, '/users/id/images/img_teste.png', 'asdfasdf'));
+	console.log(connection);
+
+	res.status(200).json(data);
 };
 
 /* register_team */

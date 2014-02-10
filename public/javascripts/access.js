@@ -1,5 +1,8 @@
-require(['jquery', 'bootstrap'], function ($, bootstrap) {
+define(['feedbacks'], function (feedbacks) {
+	'use strict';
+
 	var formCreate = $('#cadastro');
+	var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$/g;
 
 	$('#send').on('click', function () {
 		var data = null;
@@ -14,8 +17,30 @@ require(['jquery', 'bootstrap'], function ($, bootstrap) {
 
 		for (data in obj) {
 			if (obj[data] === '' || obj[data] === undefined) {
-				console.log('incorrect '+ data);
+				feedbacks.addFeedback('error', 'Field required ' + data);
 			}
+		}
+
+		if (feedbacks.getFeedback() > 0) {
+			feedbacks.sendFeedback();
+		} else {
+			console.log(obj);
+			$.ajax({
+				url: '/ead-admin/create_user',
+				type: 'POST',
+				dataType: 'json',
+				data: obj
+			})
+			.done(function(data) {
+				console.log(data);
+			})
+			.fail(function(xhr, status) {
+				console.log(xhr);
+				console.log(status);
+			})
+			.always(function() {
+				//console.log("complete");
+			});
 		}
 	});
 });

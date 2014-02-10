@@ -9,23 +9,23 @@ block content
             legend(style="padding:0 2px 0 0;") User Registration
             div(class="span6")
               label Login:
-              input(class="input-block-level" style="width:300px;" type="text" placeholder="Login" name="username" id="username" required)
+              input(class="input-block-level" style="width:300px;" type="text" placeholder="Login" name="username" id="username")
               label Name:
               input(class="input-block-level" style="width:300px;" type="text" placeholder="Name" id="first_name" name="first_name")
               label Last name:
               input(class="input-block-level" style="width:300px;" type="text" placeholder="Last Name" id="last_name" name="last_name")
               label Password:
-              input(class="input-block-level" style="width:300px;" type="password" placeholder="" id="password" name="password" required)
+              input(class="input-block-level" style="width:300px;" type="password" placeholder="" id="password" name="password")
               label Password confirmation:
-              input(class="input-block-level" style="width:300px;" type="password" id="password_confimation" name="password_confirmation" required)
+              input(class="input-block-level" style="width:300px;" type="password" id="password_confimation" name="password_confirmation")
             div(class="span5")
               label E-mail:
-              input(class="input-block-level" style="width:300px;" type="email" id="email" placeholder="example@example.com" name="email" required)
+              input(class="input-block-level" style="width:300px;" type="email" id="email" placeholder="example@example.com" name="email")
               label Confirmation e-mail:
-              input(class="input-block-level" style="width:300px;" type="email" id="email_addr_repeat" name="email_addr_repeat" required)
+              input(class="input-block-level" style="width:300px;" type="email" id="email_addr_repeat" name="email_addr_repeat")
               label Information:
               textarea(rows="3" style="width: 285px;" placeholder="Information" name="info" id="info")
-          button(class="btn btn-primary create-user" id="send" style="margin-left: 3%;") Save
+          button(type="button" class="btn btn-primary create-user" id="send" style="margin-left: 3%;") Save
           a(href="/ead-admin/" class="btn") Cancel
       hr
       footer 

@@ -21,27 +21,27 @@ exports.login = function (req, res) {
 			switch (data.type_users) {
 				case 1: 
 					res.send({
-						redirectTo: '/ead-admin/'
+						redirectTo: '/ead-admin/' + data.id
 					});
 				break;
 				case 2:
 					res.send({
-						redirectTo: '/ead-admin/'
+						redirectTo: '/ead-admin/' + data.id
 					});
 				break;
 				case 3:
 					res.send({
-						redirectTo: '/ead-teacher/'
+						redirectTo: '/ead-teacher/' + data.id
 					});
 				break;
 				case 4:
 					res.send({
-						redirectTo: '/ead-student/'
+						redirectTo: '/ead-student/' + data.id
 					});
 				break;
 				default:
 					res.send({
-						redirectTo: '/ead-student/'
+						redirectTo: '/ead-student/' + data.id
 					});
 				break;
 			}
