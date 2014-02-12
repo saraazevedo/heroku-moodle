@@ -3,12 +3,14 @@ require.config({
 		jquery: '../bower_components/jquery/jquery.min',
 		bootstrap: '../bower_components/bootstrap/docs/assets/js/bootstrap.min',
 		access: '../javascripts/access',
-		feedbacks: '../javascripts/feedback'
+		feedbacks: '../javascripts/feedback',
+		io: '../javascripts/vendors/socket.io.min',
+		chat: '../javascripts/chat'
 	},
 	shim: { 'bootstrap': { deps: ['jquery'] } }
 });
 
-require(['jquery', 'bootstrap', 'access', 'feedbacks'], function ($, bootstrap, access, feedbacks) {
+require(['jquery', 'bootstrap', 'access', 'feedbacks', 'io', 'chat'], function ($, bootstrap, access, feedbacks, io, chat) {
 	'use strict';
 
 	$('#submitLogin').on('click', function () {

@@ -8,8 +8,6 @@ var conn = require('../functions/connection');
 exports.index = function (req, res) {
 
 	var id_user = req.param.id;
-	
-
 	res.render('ead-teacher/index', {
 		layout: 'teacher',
 		title: 'Apprenticeship Object EAD'

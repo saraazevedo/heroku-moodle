@@ -6,7 +6,11 @@ define(['feedbacks'], function (feedbacks) {
 
 	$('#send').on('click', function () {
 		var data = null;
+		var id = window.location.href.indexOf('access') + 7;
+			id = window.location.href.substring(id);
+
 		var obj = {
+			id: id,
 			username: formCreate.find('#username').val(),
 			first_name: formCreate.find('#first_name').val(),
 			last_name: formCreate.find('#last_name').val(),
@@ -24,7 +28,6 @@ define(['feedbacks'], function (feedbacks) {
 		if (feedbacks.getFeedback() > 0) {
 			feedbacks.sendFeedback();
 		} else {
-			console.log(obj);
 			$.ajax({
 				url: '/ead-admin/create_user',
 				type: 'POST',
@@ -32,14 +35,18 @@ define(['feedbacks'], function (feedbacks) {
 				data: obj
 			})
 			.done(function(data) {
-				console.log(data);
+				if (data.status === 200 && data.message === 'success') {
+					feedbacks.addFeedback('success', 'Insert user with success!');
+					feedbacks.sendFeedback();
+					window.location.href = window.location.href;
+				}
 			})
 			.fail(function(xhr, status) {
 				console.log(xhr);
 				console.log(status);
 			})
 			.always(function() {
-				//console.log("complete");
+				console.log("complete");
 			});
 		}
 	});

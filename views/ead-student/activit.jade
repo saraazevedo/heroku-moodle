@@ -20,5 +20,23 @@ block content
     hr
     footer
       p &copy; Apprenticeship Object Project 2013
-    
-  
+    div(id="chat")
+      header(class="header-chat")
+        h3 Name of student
+        button(class="minimize-chat" type="button") minimize
+        button(class="close-chat" type="button") close
+      section(class="content-chat")
+        ul(class="content-list-users-chat")
+          li(class="content-item-chat")
+            div(class="content-image-chat")
+              img(class="image-chat" src="" alt="image")
+            div(class="content-message-chat")
+              p(class="message-chat")
+        ul(class="content-list-chat")
+          li(class="content-item-chat")
+            div(class="content-image-chat")
+              img(class="image-chat" src="" alt="image")
+            div(class="content-message-chat")
+              p(class="message-chat")
+      footer(class="footer-chat")
+        button(class="send-message-chat" type="button") Send

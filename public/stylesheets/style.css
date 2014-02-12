@@ -30,3 +30,13 @@ a {
 	margin-left: 5%;
 	margin-right: 5%;
 }
+
+/* Chat */
+#chat{
+	width: 250px;
+	height: 350px;
+	border: 1px solid;
+	position: absolute;
+	bottom: 10px;
+	right: 40px;
+}
