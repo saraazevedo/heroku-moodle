@@ -37,11 +37,15 @@ a {
 	height: 350px;
 	border: 1px solid #aaa;
 	position: absolute;
-	bottom: 10px;
+	bottom: -308px;
 	right: 40px;
 	border-radius: 8px;
 	overflow: hidden;
 	box-sizing: border-box;
+}
+
+#chat.active{
+	bottom: 10px;
 }
 
 .header-chat{
@@ -58,6 +62,10 @@ a {
 	display: inline-block;
 	line-height: 40px;
 	text-transform: capitalize;
+	width: 150px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .close-chat, .minimize-chat, .max-chat{
@@ -68,9 +76,25 @@ a {
 	line-height: 40px;
 }
 
+#chat.active .max-chat{
+	display: none;
+}
+
+#chat .max-chat{
+	display: block;
+}
+
+#chat.active .minimize-chat{
+	display: block;
+}
+
+#chat .minimize-chat{
+	display: none;
+}
+
 .content-chat{
 	width: 100%;
-	height: calc(100% - 80px);
+	height: calc(100% - 71px);
 	overflow-y: auto;
 	box-sizing: border-box;
 	padding: 0 5px;
@@ -94,20 +118,57 @@ a {
 }
 
 .content-message-chat{
-	padding-left: 45px;
+	padding-left: 5px;
 	display: inline-block;
+	border: 1px solid #5cf;
+	border-radius: 10px;
+	padding: 5px;
+	width: 150px;
+	float: right;
+	position: relative;
+	background: #5cf;
 }
+
+.arrow:after{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -10px;
+	border-top: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #5cf;
+	border-left: 10px solid transparent;
+}
+
+.arrow-left:after{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	margin-left: -20px;
+	border-top: 10px solid transparent;
+	border-right: 10px solid #5cf;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+}
+.arrow-top{}
+.arrow-right{}
+.arrow-bottom{}
 
 .footer-chat{
 	width: 100%;
-	height: 40px;
+	height: 31px;
 	background: #ccc;
 	position: absolute;
 	bottom: 0;
 }
 
 .footer-chat .send-message-chat{
-	float: right;
-	margin-right: 10px;
-	margin-top: 10px;
+	width: 234px;
 }
