@@ -102,11 +102,20 @@ a {
 	background: #ddd;
 }
 
-.content-list-users-chat, .content-list-chat{
-	margin: 0;
+.content-chat.list-users .content-list-users-chat{
+	display: block;
 }
 
-.content-list-users-chat li, .content-list-chat li{
+.content-chat.list-messages .content-list-message-chat{
+	display: block;
+}
+
+.content-list-users-chat, .content-list-message-chat{
+	margin: 0;
+	display: none;
+}
+
+.content-list-users-chat li, .content-list-message-chat li{
 	list-style: none;
 	margin-bottom: 10px;
 }
