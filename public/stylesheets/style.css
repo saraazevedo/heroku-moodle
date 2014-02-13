@@ -117,6 +117,16 @@ a {
 	height: 40px;
 }
 
+.content-users-chat{
+	width: calc(100% - 40px);
+	height: 40px;
+	text-transform: capitalize;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	float: right;
+}
+
 .content-message-chat{
 	padding-left: 5px;
 	display: inline-block;
@@ -170,5 +180,13 @@ a {
 }
 
 .footer-chat .send-message-chat{
-	width: 234px;
+	width: 190px;
+}
+
+.footer-chat .btn-send-message-chat{
+	margin: 0;
+	margin-left: 5px;
+	position: absolute;
+	top: 2px;
+	line-height: 26px;
 }
