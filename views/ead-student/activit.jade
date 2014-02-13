@@ -22,21 +22,26 @@ block content
       p &copy; Apprenticeship Object Project 2013
     div(id="chat")
       header(class="header-chat")
-        h3 Name of student
-        button(class="minimize-chat" type="button") minimize
-        button(class="close-chat" type="button") close
+        h4(class="name-user-chat")= user.username
+        button(class="close-chat" type="button")
+          i(class="icon-remove")
+        button(class="minimize-chat" type="button")
+          i(class="icon-minus")
+        button(class="max-chat" type="button")
+          i(class="icon-plus")
       section(class="content-chat")
         ul(class="content-list-users-chat")
           li(class="content-item-chat")
             div(class="content-image-chat")
               img(class="image-chat" src="" alt="image")
             div(class="content-message-chat")
-              p(class="message-chat")
+              p(class="message-chat") Ola mundo!
         ul(class="content-list-chat")
           li(class="content-item-chat")
             div(class="content-image-chat")
               img(class="image-chat" src="" alt="image")
             div(class="content-message-chat")
-              p(class="message-chat")
+              p(class="message-chat") Ola mundo!
       footer(class="footer-chat")
-        button(class="send-message-chat" type="button") Send
+        button(class="send-message-chat btn btn-primary btn-mini" type="button")
+          i(class="icon-share-alt")

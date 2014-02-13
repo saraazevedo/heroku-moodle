@@ -20,30 +20,55 @@ exports.login = function (req, res) {
 
 		rows.forEach(function (data) {
 			switch (data.type_users) {
-				case 1: 
-					res.send({
-						redirectTo: '/ead-admin/' + data.id + '/'
-					});
+			case 1:
+				req.session.user = {
+					id: data.id,
+					username: data.username,
+					type_user: data.type_users
+				};
+				res.send({
+					redirectTo: '/ead-admin/'
+				});
 				break;
-				case 2:
-					res.send({
-						redirectTo: '/ead-admin/' + data.id + '/'
-					});
+			case 2:
+				req.session.user = {
+					id: data.id,
+					username: data.username,
+					type_user: data.type_users
+				};
+				res.send({
+					redirectTo: '/ead-admin/'
+				});
 				break;
-				case 3:
-					res.send({
-						redirectTo: '/ead-teacher/' + data.id + '/'
-					});
+			case 3:
+				req.session.user = {
+					id: data.id,
+					username: data.username,
+					type_user: data.type_users
+				};
+				res.send({
+					redirectTo: '/ead-teacher/'
+				});
 				break;
-				case 4:
-					res.send({
-						redirectTo: '/ead-student/' + data.id + '/'
-					});
+			case 4:
+				req.session.user = {
+					id: data.id,
+					username: data.username,
+					type_user: data.type_users
+				};
+				res.send({
+					redirectTo: '/ead-student/'
+				});
 				break;
-				default:
-					res.send({
-						redirectTo: '/ead-student/' + data.id + '/'
-					});
+			default:
+				req.session.user = {
+					id: data.id,
+					username: data.username,
+					type_user: data.type_users
+				};
+				res.send({
+					redirectTo: '/ead-student/'
+				});
 				break;
 			}
 		});
